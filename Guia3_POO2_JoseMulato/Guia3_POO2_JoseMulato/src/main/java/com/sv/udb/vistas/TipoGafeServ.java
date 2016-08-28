@@ -16,9 +16,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
+/** Servelet para TipoGafeServ
  *
  * @author joseph
+ * @version 28/08/2016
  */
 @WebServlet(name = "TipoGafeServ", urlPatterns = {"/TipoGafeServ"})
 public class TipoGafeServ extends HttpServlet {

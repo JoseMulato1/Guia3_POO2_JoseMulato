@@ -16,9 +16,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
+/** Serverlet para LugaAcceServ
  *
  * @author joseph
+ * @version 28/08/2016
  */
 @WebServlet(name = "LugaAcceServ", urlPatterns = {"/LugaAcceServ"})
 public class LugaAcceServ extends HttpServlet {
@@ -34,9 +35,11 @@ public class LugaAcceServ extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+                
         boolean esValido = request.getMethod().equals("POST");
         if(esValido)
         {
+
             String mens = "";
             String CRUD = request.getParameter("lugaAcceBton");
             if(CRUD.equals("Guardar"))

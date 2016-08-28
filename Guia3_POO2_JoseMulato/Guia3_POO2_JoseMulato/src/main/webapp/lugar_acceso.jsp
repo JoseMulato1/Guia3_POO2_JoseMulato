@@ -78,8 +78,7 @@
                                 <div class="col-lg-6">
          <h1>Acceso</h1>
         <h1>${mensAler}</h1>
-        <form action="LugaAcceServ" method="Post">    
-              
+        <form action="LugaAcceServ" method="Post">                  
             <div class="form-group">
                     <input type="hidden" name="CodiLuga" value="${CodiLuga}"/>
                     <label for="nomb">Nombre: </label>

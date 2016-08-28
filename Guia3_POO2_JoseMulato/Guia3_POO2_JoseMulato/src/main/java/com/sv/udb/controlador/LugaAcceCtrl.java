@@ -16,11 +16,22 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
-/**
- *
+/**Clase LugaAcceCtrl
+ * 
  * @author joseph
+ * @version 28/08/2016
+ * 
  */
+
 public class LugaAcceCtrl {
+    
+    /** Metodo que sirve para guardar los datos introduccidos que seran enviados a la base de datos
+     * 
+     * @param obje objeto para LugarAcce
+     * @return boolean si guarda los datos
+     * @exception si no guarda los datos activa la exception
+     * @since 1.0
+     */
     public boolean guar(LugaAcce obje)
     {
         boolean resp = false;
@@ -43,6 +54,13 @@ public class LugaAcceCtrl {
         return resp;
     }
     
+    /** Metodo para consultar todos los datos de la base para LugaAcce
+     * 
+     * @return devuelve la lista LugaAcce
+     * @exception los datos no se pudieron consultar
+     * @since 1.0
+     */
+    
      public List<LugaAcce>  ConsTodo()
     {
         List<LugaAcce> resp = new ArrayList<>();
@@ -62,6 +80,13 @@ public class LugaAcceCtrl {
         return resp;  
     }
      
+     /** Metodo para seleccionar un registro que se encuentra en la base
+      * 
+      * @param empId parametro de identificacion
+      * @return devuelve la informacion del LugaAcce seleccionada
+      * @exception error al consultar el dato seleccionado
+      */
+     
      public LugaAcce get(Long empId)
     {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("POOPU");
@@ -79,6 +104,13 @@ public class LugaAcceCtrl {
         return resp;
     }
     
+     /** Metodo para modificar un registro LugaAcce de la base de datos
+      * 
+      * @param obje objeto para LugaAcce
+      * @return boolean si modifica los datos
+      * @exception  si no modifica los datos
+      * @since 1.0
+      */ 
     public boolean modi(LugaAcce obje)
     {
         boolean resp = false;
@@ -101,6 +133,13 @@ public class LugaAcceCtrl {
         return resp;
     } 
     
+    /** Metodo para eliminar un registro LugaAcce de la base de datos
+     * 
+     * @param obje objeto para LugaAcce
+     * @return boolean si elimina los datos
+     * @exception si no elimina los datos
+     * @since 1.0
+     */
     public boolean elimin(LugaAcce obje)
     {
         boolean resp = false;

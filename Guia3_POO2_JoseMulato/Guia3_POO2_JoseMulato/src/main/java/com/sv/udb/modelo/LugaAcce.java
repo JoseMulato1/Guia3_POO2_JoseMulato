@@ -21,10 +21,12 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
+/** Modelo para LugaAcce
  *
  * @author joseph
+ * @version 28/08/2016
  */
+
 @Entity
 @Table(name = "luga_acce", catalog = "control3", schema = "")
 @XmlRootElement
@@ -55,49 +57,97 @@ public class LugaAcce implements Serializable {
     @Column(name = "ESTA")
     private Integer esta;
 
+    /** constructor vacio
+     * 
+     */
     public LugaAcce() {
     }
-
+    
+    /** constructor para codigo
+     * 
+     * @param codiLugaAcce codigo de LugaAcce 
+     */
     public LugaAcce(Long codiLugaAcce) {
         this.codiLugaAcce = codiLugaAcce;
     }
 
+    /** constructor para obtener valor
+     * 
+     * @return un entero para CodiLugaAcce
+     */
     public Long getCodiLugaAcce() {
         return codiLugaAcce;
     }
 
+    /** constructor que devuelve el valor
+     * 
+     * @param codiLugaAcce devuelve un entero para codiLugaAcce 
+     */
     public void setCodiLugaAcce(Long codiLugaAcce) {
         this.codiLugaAcce = codiLugaAcce;
     }
+    
+    /** constructor que obtiene el valor
+     * 
+     * @return un dato tipo String para NombLugaAcce 
+     */
 
     public String getNombLugaAcce() {
         return nombLugaAcce;
     }
-
+    
+    /** constructor que devuelve el valor
+     * 
+     * @param nombLugaAcce devuelve una cadena de texto para nombLugaAcce 
+     */
     public void setNombLugaAcce(String nombLugaAcce) {
         this.nombLugaAcce = nombLugaAcce;
     }
-
+    
+    /** constructor que obtiene el valor
+     * 
+     * @return un dato tipo date para FechAlta 
+     */
     public Date getFechAlta() {
         return fechAlta;
     }
-
+    
+    /** constructor que devuelve el valor
+     * 
+     * @param fechAlta devuelve la fecha para fechAlta 
+     */
     public void setFechAlta(Date fechAlta) {
         this.fechAlta = fechAlta;
     }
 
+    /** constructor que obtiene el valor
+     * 
+     * @return un dato tipo date para FechaBaja 
+     */
     public Date getFechBaja() {
         return fechBaja;
     }
-
+    
+    /** constructor que devuelve el valor
+     * 
+     * 
+     * @param fechBaja  devuelve la fecha para fechBaja
+     */
     public void setFechBaja(Date fechBaja) {
         this.fechBaja = fechBaja;
     }
-
+    
+    /** constructor que obtiene el valor
+     * 
+     * @return un dato tipo boolean para Esta 
+     */
     public Integer getEsta() {
         return esta;
     }
-
+    /** constructor que devuleve el valor
+     * 
+     * @param esta devuelve el estado para Esta
+     */
     public void setEsta(Integer esta) {
         this.esta = esta;
     }
